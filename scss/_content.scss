@@ -1,0 +1,140 @@
+main {
+    margin-left: 400px;
+    min-height: 600px;
+    padding: 20px;
+
+    ul {
+        width: 100%;
+        margin-bottom: 10px;
+        margin-right:20px;
+        
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        li {
+            float:right;
+            margin-right: 20px;
+            width: 120px;
+            height: 26px;
+
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: #fff;
+                font: bold 7px/26px "Orbitron";
+                color: #aaa;
+                letter-spacing: 1px;
+                text-align:center;
+                box-shadow: 0px 5px 20px rgba(0,0,0,.05);
+                border-radius: 15px;
+            }
+
+            &.on {
+                a {
+                    // background:linear-gradient(45deg, aqua, cornflowerblue);
+                    background-image: linear-gradient(to left top, #6b98dc, #9fa3e3, #c7b0e7, #e6bfe9, rgb(255, 209, 237));
+                    color: #fff;
+                    box-shadow: 0px 5px 20px rgba(252, 166, 248, 0.637);
+                }
+            }
+        }
+    }
+
+    section {
+        width: 100%;
+
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        article {
+            width: 20%;
+            float: left;
+            overflow:hidden;
+            padding: 12px;
+            text-align:center;
+
+            .inner {
+                width: 100%;
+                background: #fff;
+                padding: 14px;
+                box-shadow: 5px 5px 10px rgba(0,0,0,.1);
+
+                img {
+                    width: 100%;
+                }
+
+                h2 {
+                    font: bold 16px/1 "Orbitron";
+                    letter-spacing: 1px;
+                    color: #444;
+                    margin-top: 15px;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    font: 14px/1.2 "arial";
+                    color: #777;
+                    margin-bottom:15px;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:$web){
+
+    main {
+        margin-left: 0;
+    }
+
+}
+
+@media screen and (max-width:$tabB){
+
+  main section article {
+      width: 25%;
+  }
+
+}
+
+@media screen and (max-width:$tabM){
+
+    main section article {
+        width: 33.333%;
+    }
+
+    main ul li{
+        width:calc(25% - 5px);
+        margin-right: 5px;
+    
+        &:first-child {
+            margin-right: 0;
+        }
+    }
+  
+  }
+
+@media screen and (max-width:$tabS){
+
+main section article {
+    width: 50%;
+}
+
+
+}
+
+@media screen and (max-width:$mob){
+
+main section article {
+    width: 100%;
+}
+
+}

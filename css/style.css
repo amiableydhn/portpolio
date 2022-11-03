@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: #e2e4f7;
+}
+
+header {
+  width: 400px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right bottom, #6b98dc, #9fa3e3, #c7b0e7, #e6bfe9, #ffd1ed);
+}
+header h1 {
+  font: bold 50px/1 "Orbitron";
+  color: #fff;
+  letter-spacing: 1px;
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-200%);
+}
+header h1::before {
+  content: "UI/UX DEVELOPMENT";
+  font: 14px/1 "Orbitron";
+  color: #fff;
+  letter-spacing: 2px;
+  position: absolute;
+  left: 0;
+  top: 140px;
+}
+header h1::after {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 2px;
+  background: #fff;
+  margin-top: 20px;
+}
+header ul {
+  position: absolute;
+  left: 10%;
+  bottom: 100px;
+}
+header ul li {
+  margin-bottom: 10px;
+}
+header ul li a {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  color: #fff;
+}
+header ul li a span {
+  display: inline-block;
+  transform: scale(0.7);
+  transform-origin: left center;
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 1399px) {
+  header {
+    width: 100%;
+    height: 80px;
+    position: relative;
+  }
+  header h1 {
+    font: bold 24px/1 "Orbitron";
+    transform: translateY(-50%);
+    left: 50px;
+  }
+  header h1::before, header h1::after {
+    display: none;
+  }
+  header ul {
+    display: flex;
+    left: auto;
+    right: 30px;
+    bottom: 25px;
+  }
+  header ul li {
+    margin-left: 20px;
+  }
+  header ul li a span {
+    display: none;
+  }
+}
+@media screen and (max-width: 567px) {
+  header h1 {
+    font-size: 20px;
+    left: f 20px;
+  }
+  header ul {
+    display: flex;
+  }
+  header ul li {
+    margin-left: 20px;
+  }
+  header ul li a span {
+    display: none;
+  }
+}
+main {
+  margin-left: 400px;
+  min-height: 600px;
+  padding: 20px;
+}
+main ul {
+  width: 100%;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+main ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+main ul li {
+  float: right;
+  margin-right: 20px;
+  width: 120px;
+  height: 26px;
+}
+main ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  font: bold 7px/26px "Orbitron";
+  color: #aaa;
+  letter-spacing: 1px;
+  text-align: center;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+}
+main ul li.on a {
+  background-image: linear-gradient(to left top, #6b98dc, #9fa3e3, #c7b0e7, #e6bfe9, rgb(255, 209, 237));
+  color: #fff;
+  box-shadow: 0px 5px 20px rgba(252, 166, 248, 0.637);
+}
+main section {
+  width: 100%;
+}
+main section::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+main section article {
+  width: 20%;
+  float: left;
+  overflow: hidden;
+  padding: 12px;
+  text-align: center;
+}
+main section article .inner {
+  width: 100%;
+  background: #fff;
+  padding: 14px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+main section article .inner img {
+  width: 100%;
+}
+main section article .inner h2 {
+  font: bold 16px/1 "Orbitron";
+  letter-spacing: 1px;
+  color: #444;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+main section article .inner p {
+  font: 14px/1.2 "arial";
+  color: #777;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 1399px) {
+  main {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main section article {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 767px) {
+  main section article {
+    width: 33.333%;
+  }
+
+  main ul li {
+    width: calc(25% - 5px);
+    margin-right: 5px;
+  }
+  main ul li:first-child {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 567px) {
+  main section article {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 469px) {
+  main section article {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
